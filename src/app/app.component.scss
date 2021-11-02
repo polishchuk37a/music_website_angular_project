@@ -1,1 +1,6 @@
-
+.app-cont {
+    display: flex;
+    app-header {
+        width: 100%;
+    }
+}
