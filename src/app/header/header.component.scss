@@ -1,0 +1,25 @@
+.header-body{
+    position: relative;
+    .header-body__cover{
+
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header-body__input{
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        bottom: 52px;
+        right: 26px;
+
+        .body-input__search{
+            width: 364px;
+            background: rgba(0,0,0,0);
+            border: none;
+            border-bottom: 1px solid white;
+
+            font-size: 16px;
+            color: white;
+        }
+    }
+}
