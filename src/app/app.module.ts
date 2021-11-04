@@ -7,6 +7,7 @@ import {SideBarComponent} from "./side-bar/side-bar.component";
 import {HeaderComponent} from './header/header.component';
 import {MainComponent} from './main/main.component';
 import { SwiperModule } from "swiper/angular";
+import { AllAlbumsComponent } from './main/all-albums/all-albums.component';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { SwiperModule } from "swiper/angular";
         SideBarComponent,
         AppComponent,
         HeaderComponent,
-        MainComponent
+        MainComponent,
+        AllAlbumsComponent
     ],
     imports: [
         BrowserModule,
