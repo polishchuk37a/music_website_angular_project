@@ -8,6 +8,7 @@ import {HeaderComponent} from './header/header.component';
 import {MainComponent} from './main/main.component';
 import { SwiperModule } from "swiper/angular";
 import { AllAlbumsComponent } from './main/all-albums/all-albums.component';
+import { BestAlbumComponent } from './main/best-album/best-album.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { AllAlbumsComponent } from './main/all-albums/all-albums.component';
         AppComponent,
         HeaderComponent,
         MainComponent,
-        AllAlbumsComponent
+        AllAlbumsComponent,
+        BestAlbumComponent
     ],
     imports: [
         BrowserModule,
