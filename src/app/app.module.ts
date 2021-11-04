@@ -10,6 +10,8 @@ import { SwiperModule } from "swiper/angular";
 import { AllAlbumsComponent } from './main/all-albums/all-albums.component';
 import { BestAlbumComponent } from './main/best-album/best-album.component';
 import { MusicComponent } from './main/music/music.component';
+import {HttpClientModule} from "@angular/common/http";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -22,11 +24,14 @@ import { MusicComponent } from './main/music/music.component';
         BestAlbumComponent,
         MusicComponent
     ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        SwiperModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SwiperModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+
+  ],
     providers: [],
     bootstrap: [AppComponent]
 })
