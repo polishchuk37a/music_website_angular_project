@@ -1,23 +1,30 @@
 <div class="all-albums__body">
     <div class="slider">
+        <div class="famous-albums">
+            <p class="famous-albums_title">The most famous albums</p>
+        </div>
         <swiper
             [spaceBetween]="30"
             [slidesPerView]="3"
+            [mousewheel]="true"
             [autoplay]="{
-                        delay: 1500,
+                        delay: 1000,
                         disableOnInteraction: false
                     }"
             class="mySwiper"
         >
-            <ng-template swiperSlide>Slide 1</ng-template>
-            <ng-template swiperSlide>Slide 2</ng-template>
-            <ng-template swiperSlide>Slide 3</ng-template>
-            <ng-template swiperSlide>Slide 4</ng-template>
-            <ng-template swiperSlide>Slide 5</ng-template>
-            <ng-template swiperSlide>Slide 6</ng-template>
-            <ng-template swiperSlide>Slide 7</ng-template>
-            <ng-template swiperSlide>Slide 8</ng-template>
-            <ng-template swiperSlide>Slide 9</ng-template>
+            <ng-template swiperSlide *ngFor="let album of albumDeezer">
+                <div>
+                    <div class="album-photo">
+                        <img class="photo" src="{{album.album.cover_medium}}" alt="">
+                    </div>
+                    <div class="album_title">
+                        <p class="title">{{album.album.title}}</p>
+                    </div>
+                </div>
+
+            </ng-template>
         </swiper>
+
     </div>
 </div>

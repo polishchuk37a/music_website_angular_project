@@ -10,6 +10,7 @@ import { SwiperModule } from "swiper/angular";
 import { AllAlbumsComponent } from './main/all-albums/all-albums.component';
 import { BestAlbumComponent } from './main/best-album/best-album.component';
 import { MusicComponent } from './main/music/music.component';
+import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -26,6 +27,8 @@ import { MusicComponent } from './main/music/music.component';
         BrowserModule,
         AppRoutingModule,
         SwiperModule,
+        HttpClientModule,
+        HttpClientJsonpModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
