@@ -1,73 +1,29 @@
-@import "~swiper/scss";
-@import "~swiper/css/pagination";
-@import "~swiper/css/navigation";
+.main-content{
+    .main-container{
+        max-width: 1440px;
 
-.swiper {
-    width: 100%;
-    height: 100%;
-}
+        margin: 0 auto;
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+        padding: 0 15px;
+        box-sizing: content-box;
 
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
+        .main-body{
+            display: flex;
+            margin: 26px 0 0 0;
 
+            justify-content: space-around;
 
-.main-content {
-    display: flex;
+            .main-body__artist{
+                display: flex;
+                flex-direction: column;
 
-    .slider {
-        display: flex;
-        margin-top: 26px;
-        margin-left: 29px;
-        width: 701px;
-        height: 310px;
-        background: #F3F3F3;
-        border-radius: 10px;
-
-    }
-
-    .best-artist {
-        margin-top: 26px;
-        margin-left: 29px;
-        width: 701px;
-        height: 328px;
-        background: #F3F3F3;
-        border-radius: 10px;
-    }
-
-    .best-music {
-        margin-top: 26px;
-        margin-left: 29px;
-        width: 415px;
-        height: 664px;
-        background: #F3F3F3;
-        border-radius: 10px;
+                & > *:not(:last-child){
+                    margin: 0 0 26px 0;
+                }
+            }
+        }
     }
 }
 
-.player {
-    margin-top: 26px;
-    margin-left: 29px;
-    width: 1144px;
-    height: 290px;
-    background: #F3A0A0;
-    border-radius: 10px;
-}
 
 
