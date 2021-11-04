@@ -9,6 +9,7 @@ import {MainComponent} from './main/main.component';
 import { SwiperModule } from "swiper/angular";
 import { AllAlbumsComponent } from './main/all-albums/all-albums.component';
 import { BestAlbumComponent } from './main/best-album/best-album.component';
+import { MusicComponent } from './main/music/music.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { BestAlbumComponent } from './main/best-album/best-album.component';
         HeaderComponent,
         MainComponent,
         AllAlbumsComponent,
-        BestAlbumComponent
+        BestAlbumComponent,
+        MusicComponent
     ],
     imports: [
         BrowserModule,
