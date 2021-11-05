@@ -4,6 +4,7 @@ import {GetMusicService} from "../../service/get-music.service";
 import {tap} from "rxjs/operators";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Tracks} from "../../interface/tracks";
+import {DeezerMusic} from "../../interface/deezer-music";
 
 @Component({
   selector: 'app-music',
@@ -13,7 +14,7 @@ import {Tracks} from "../../interface/tracks";
 export class MusicComponent implements OnInit {
 
   music: Music['data'] = [];
-  tracks: Tracks['tracks'] = [];
+  tracks: DeezerMusic[] = [];
   formGroup: FormGroup;
 
   constructor(private httpService: GetMusicService, private formBuilder: FormBuilder) {
@@ -28,7 +29,7 @@ export class MusicComponent implements OnInit {
   }
   add(): void{
     this.httpService.getRandomMusic().pipe(
-      tap(value => console.log(this.music = value))
+      tap(value => this.tracks = value.tracks.data)
     ).subscribe()
   }
   /*addItemInContainer(writeMusic: string): void{

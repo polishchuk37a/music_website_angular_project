@@ -11,8 +11,8 @@ export class GetMusicService {
 
   constructor(private readonly httpClient: HttpClient, private readonly jsonp: HttpClientJsonpModule) { }
 
-  getRandomMusic(): Observable<Music['data']>{
-    return this.httpClient.jsonp<Music['data']>('https://api.deezer.com/chart&output=jsonp', 'callback');
+  getRandomMusic(): Observable<Tracks>{
+    return this.httpClient.jsonp<Tracks>('https://api.deezer.com/chart&output=jsonp', 'callback');
   }
 
   getMusic(writeMusic: string): Observable<Music>{
