@@ -3,4 +3,16 @@
     background: $mainBackground;
     width: 415px;
     height: 664px;
+
+  .music-column{
+
+    .music-item{
+      display: flex;
+    }
+    .music-line{
+      width: 90%;
+      margin: 0 auto;
+      border: .1px solid gray;
+    }
+  }
 }
