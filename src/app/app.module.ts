@@ -11,6 +11,7 @@ import { AllAlbumsComponent } from './main/all-albums/all-albums.component';
 import { BestAlbumComponent } from './main/best-album/best-album.component';
 import { MusicComponent } from './main/music/music.component';
 import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -23,13 +24,15 @@ import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
         BestAlbumComponent,
         MusicComponent
     ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        SwiperModule,
-        HttpClientModule,
-        HttpClientJsonpModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SwiperModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    HttpClientJsonpModule
+
+  ],
     providers: [],
     bootstrap: [AppComponent]
 })
