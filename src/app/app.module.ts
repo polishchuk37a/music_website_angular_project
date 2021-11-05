@@ -10,7 +10,7 @@ import { SwiperModule } from "swiper/angular";
 import { AllAlbumsComponent } from './main/all-albums/all-albums.component';
 import { BestAlbumComponent } from './main/best-album/best-album.component';
 import { MusicComponent } from './main/music/music.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
@@ -30,6 +30,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     SwiperModule,
     HttpClientModule,
     ReactiveFormsModule,
+    HttpClientJsonpModule
 
   ],
     providers: [],

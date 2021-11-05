@@ -3,6 +3,7 @@ import {Music} from "../../interface/music";
 import {GetMusicService} from "../../service/get-music.service";
 import {tap} from "rxjs/operators";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {Tracks} from "../../interface/tracks";
 
 @Component({
   selector: 'app-music',
@@ -12,6 +13,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 export class MusicComponent implements OnInit {
 
   music: Music['data'] = [];
+  tracks: Tracks['tracks'] = [];
   formGroup: FormGroup;
 
   constructor(private httpService: GetMusicService, private formBuilder: FormBuilder) {
@@ -22,13 +24,18 @@ export class MusicComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.add();
   }
-
-  addItemInContainer(writeMusic: string): void{
+  add(): void{
+    this.httpService.getRandomMusic().pipe(
+      tap(value => console.log(this.music = value))
+    ).subscribe()
+  }
+  /*addItemInContainer(writeMusic: string): void{
     this.httpService.getMusic(writeMusic)
       .pipe(
         tap(value => console.log(this.music = value.data))
       ).subscribe()
-  }
+  }*/
 
 }
