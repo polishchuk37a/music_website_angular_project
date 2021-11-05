@@ -1,18 +1,50 @@
 @import "~src/styles";
 .music-body{
-    background: $mainBackground;
-    width: 415px;
-    height: 664px;
+  background: $mainBackground;
+  max-width: 415px;
+  width: 100%;
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+
+  .music-body__title{
+    text-align: center;
+    background: #2D2A32;
+
+    border-radius: 10px 10px 0 0;
+
+    .body-title{
+      font-size: 24px;
+      line-height: 28px;
+
+      padding: 13px 0;
+
+      color: white;
+    }
+  }
 
   .music-column{
 
     .music-item{
       display: flex;
+      align-items: center;
+
+      .music-img{
+        border-radius: 10px;
+
+        margin: 15px;
+      }
+      .music-artist-name{
+        font-size: 16px;
+        letter-spacing: .5px;
+      }
     }
+
     .music-line{
       width: 90%;
       margin: 0 auto;
       border: .1px solid gray;
     }
+
   }
 }
