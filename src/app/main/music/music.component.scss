@@ -1,19 +1,22 @@
 @import "~src/styles";
-.music-body{
+
+.music-body {
   background: $mainBackground;
   max-width: 415px;
+
   width: 100%;
   border-radius: 10px;
 
+
   box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 
-  .music-body__title{
+  .music-body__title {
     text-align: center;
     background: #2D2A32;
 
     border-radius: 10px 10px 0 0;
 
-    .body-title{
+    .body-title {
       font-size: 24px;
       line-height: 28px;
 
@@ -23,28 +26,44 @@
     }
   }
 
-  .music-column{
+  .scroll {
 
-    .music-item{
-      display: flex;
-      align-items: center;
+    height: 614px;
+    overflow: auto;
 
-      .music-img{
-        border-radius: 10px;
+    .music-column {
+      .music-item {
+        display: flex;
+        align-items: center;
 
-        margin: 15px;
+        .music-img {
+          border-radius: 10px;
+
+          margin: 15px;
+        }
+
+        .music-artist-name {
+          font-size: 16px;
+          letter-spacing: .5px;
+        }
+
+        .music-title {
+          overflow-x: hidden;
+        }
       }
-      .music-artist-name{
-        font-size: 16px;
-        letter-spacing: .5px;
+      &:not(:last-child) {
+        border-bottom: 1px solid grey;
       }
     }
 
-    .music-line{
-      width: 90%;
-      margin: 0 auto;
-      border: .1px solid gray;
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 8px;
     }
 
+    &::-webkit-scrollbar-thumb {
+      background: #68686b;
+    }
   }
 }
+
