@@ -27,32 +27,43 @@
   }
 
   .scroll {
-
     height: 614px;
     overflow: auto;
 
-    .music-column {
-      .music-item {
-        display: flex;
-        align-items: center;
+    .scroll-container{
+      padding: 0 15px;
 
-        .music-img {
-          border-radius: 10px;
+      .music-column {
+        .music-item {
+          display: flex;
+          align-items: center;
 
-          margin: 15px;
+          .item__img {
+            margin: 15px 15px 15px 0;
+
+            .music-img{
+              border-radius: 10px;
+            }
+          }
+
+          .item__title{
+            display: flex;
+            .music-artist-name {
+              font-size: 16px;
+              letter-spacing: .5px;
+            }
+
+            .music-title {
+              overflow-x: hidden;
+            }
+            & > *:not(:last-child){
+              margin: 0 5px 0 0;
+            }
+          }
         }
-
-        .music-artist-name {
-          font-size: 16px;
-          letter-spacing: .5px;
+        &:not(:last-child) {
+          border-bottom: 1px solid grey;
         }
-
-        .music-title {
-          overflow-x: hidden;
-        }
-      }
-      &:not(:last-child) {
-        border-bottom: 1px solid grey;
       }
     }
 

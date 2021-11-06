@@ -3,14 +3,19 @@
     <p class="body-title">Best of the week</p>
   </div>
   <div class="scroll">
-    <div class="music-column" *ngFor="let music of tracks">
-      <div class="music-item">
-        <img class="music-img" src="{{music.artist.picture_small}}" alt="">
-        <p class="music-artist-name">{{music.artist.name}}</p>
-        <p>-</p>
-        <p class="music-title">{{music.title}}</p>
+    <div class="scroll-container">
+      <div class="music-column" *ngFor="let music of tracks">
+        <div class="music-item">
+          <div class="item__img">
+            <img class="music-img" src="{{music.artist.picture_small}}" alt="">
+          </div>
+          <div class="item__title">
+            <p class="music-artist-name">{{music.artist.name}}</p>
+            <p>-</p>
+            <p class="music-title">{{music.title}}</p>
+          </div>
+        </div>
       </div>
-      <div class="music-line"></div>
     </div>
   </div>
 </div>
