@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Music} from "../../interface/music";
 import {GetMusicService} from "../../service/get-music.service";
 import {tap} from "rxjs/operators";
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {Tracks} from "../../interface/tracks";
 import {DeezerMusic} from "../../interface/deezer-music";
-import {fromEvent} from "rxjs";
+
 
 @Component({
   selector: 'app-music',
