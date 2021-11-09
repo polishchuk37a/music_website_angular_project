@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {FindArtistService} from "../service/find-artist.service";
+import {GetMusicService} from "../service/get-music.service";
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ export class HeaderComponent implements OnInit {
 
   searchForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private testService: FindArtistService) {
+  constructor(private formBuilder: FormBuilder, private testService: FindArtistService
+              , private readonly getMusicService: GetMusicService) {
     this.searchForm = this.formBuilder.group({
       artistName: ['']
     })
@@ -26,5 +28,6 @@ export class HeaderComponent implements OnInit {
       return
     }
     this.testService.findArtistAlbum(name);
+    this.getMusicService.getMusic(name);
   }
 }
