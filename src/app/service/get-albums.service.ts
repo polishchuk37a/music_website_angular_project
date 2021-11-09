@@ -5,16 +5,22 @@ import {HttpClient} from "@angular/common/http";
 import {Albums} from "../interface/albums";
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class GetAlbumsService {
 
-    apiAlbum = 'https://api.deezer.com/search?q=album&output=jsonp';
+  apiArtist = 'https://api.deezer.com/search/?q=';
+  apiAlbum = 'https://api.deezer.com/search?q=album&output=jsonp';
 
-    constructor(private readonly http: HttpClient) {
-    }
+  constructor(private readonly http: HttpClient) {
+  }
 
-    getAlbumsData():Observable<Albums> {
-        return this.http.jsonp<Albums>(this.apiAlbum, 'callback');
-    }
+  getAlbumsData(): Observable<Albums> {
+    return this.http.jsonp<Albums>(this.apiAlbum, 'callback');
+  }
+
+  findArtist(artistName: string): Observable<Albums> {
+    const url = `${this.apiArtist}"${artistName}"&output=jsonp`;
+    return this.http.jsonp<Albums>(url, 'callback')
+  }
 }
