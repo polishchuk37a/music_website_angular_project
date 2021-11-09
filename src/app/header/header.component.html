@@ -1,10 +1,9 @@
 <header class="header">
 
   <div class="header-body__input" [formGroup]="searchForm">
-    <input class="search-input" type="search" placeholder="Write the name of artist" formControlName="artistName">
-    <img class="search search-artist" src="https://img.icons8.com/ios-glyphs/30/ffffff/search&#45;&#45;v1.png" (click)="getArtist()"/>
+    <input type="search" placeholder="Write the name of artist" formControlName="artistName">
+    <img class="fa fa-search" src="https://img.icons8.com/ios-glyphs/30/ffffff/search&#45;&#45;v1.png" (click)="getArtist()"/>
   </div>
-
 <!--    <div class="header-body__input" [formGroup]="searchForm">-->
 <!--        <input type="text" class="body-input" formControlName="artistName">-->
 <!--        <img class="search-artist" src="https://img.icons8.com/ios-glyphs/30/ffffff/search&#45;&#45;v1.png" (click)="getArtist()"/>-->
