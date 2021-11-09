@@ -9,7 +9,7 @@ import {Tracks} from "../interface/tracks";
 })
 export class GetMusicService {
 
-  constructor(private readonly httpClient: HttpClient, private readonly jsonp: HttpClientJsonpModule) { }
+  constructor(private readonly httpClient: HttpClient) { }
 
   getRandomMusic(): Observable<Tracks>{
     return this.httpClient.jsonp<Tracks>('https://api.deezer.com/chart&output=jsonp', 'callback');

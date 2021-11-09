@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup} from "@angular/forms";
+import {FindArtistService} from "../service/find-artist.service";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  searchForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder, private testService: FindArtistService) {
+    this.searchForm = this.formBuilder.group({
+      artistName: ['']
+    })
+  }
 
   ngOnInit(): void {
   }
 
+  getArtist() {
+    const name = this.searchForm.get("artistName")?.value
+    if (name.length === 0) {
+      return
+    }
+    this.testService.findArtistAlbum(name);
+  }
 }

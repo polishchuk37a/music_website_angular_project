@@ -1,24 +1,64 @@
-.header{
-    background: url(../../assets/img/header_img.jpg) center / cover no-repeat;
+.header {
+  background: url(../../assets/img/header_img.jpg) center / cover no-repeat;
+  display: flex;
+  justify-content: end;
+  padding: 70px 26px 26px 0;
 
-    .header-body__input{
-        text-align: end;
-        padding: 117px 26px 26px 0;
+  .header-body__input{
+    position: relative;
+    transition: all 0.4s;
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0);
+    border-radius: 25px;
 
-        .body-input{
-            max-width: 364px;
-            width: 100%;
-
-            background: rgba(0,0,0,0);
-
-            outline: none;
-
-            border: none;
-            border-bottom: 1px solid white;
-
-            color: white;
-
-            font-size: 16px;
-        }
+    .search-input{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;;
+      height: 42.5px;
+      line-height: 30px;
+      outline: 0;
+      border: 0;
+      display: none;
+      font-size: 1em;
+      border-radius: 20px;
+      padding: 0 20px;
     }
+  }
+
+  .search{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+  }
+
+  .header-body__input:hover{
+    width: 360px;
+    cursor: pointer;
+  }
+
+  .header-body__input:hover input{
+    display: block;
+  }
+
+  .header-body__input:hover .search{
+    color: white;
+  }
 }
+
+.search-artist:hover{
+  cursor: pointer;
+}
+
+

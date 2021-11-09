@@ -1,6 +1,5 @@
+import {ArtistAlbum} from "./artist-album";
+
 export interface AlbumsInfo {
-    album:{
-        cover_medium: string,
-        title: string
-    }
+    album: ArtistAlbum
 }
